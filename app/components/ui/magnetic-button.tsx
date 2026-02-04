@@ -1,13 +1,17 @@
 'use client';
 
-import { useRef, useState, useCallback, type ReactNode, type ButtonHTMLAttributes } from 'react';
+import { useRef, useState, useCallback, type ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
-interface MagneticButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface MagneticButtonProps {
   children: ReactNode;
   variant?: 'default' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg' | 'xl';
+  className?: string;
+  onClick?: () => void;
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export function MagneticButton({
@@ -15,7 +19,9 @@ export function MagneticButton({
   className,
   variant = 'default',
   size = 'md',
-  ...props
+  onClick,
+  disabled,
+  type = 'button',
 }: MagneticButtonProps) {
   const ref = useRef<HTMLButtonElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -49,18 +55,21 @@ export function MagneticButton({
   return (
     <motion.button
       ref={ref}
+      type={type}
+      disabled={disabled}
+      onClick={onClick}
       className={cn(
         'relative inline-flex items-center justify-center rounded-full font-medium transition-colors',
         sizeClasses[size],
         variantClasses[variant],
+        disabled && 'opacity-50 cursor-not-allowed',
         className
       )}
       animate={{ x: position.x, y: position.y }}
       transition={{ type: 'spring', damping: 15, stiffness: 150, mass: 0.1 }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      whileHover={{ scale: 1.05 }}
-      {...props}
+      whileHover={disabled ? {} : { scale: 1.05 }}
     >
       <motion.span
         className="inline-flex flex-row items-center"

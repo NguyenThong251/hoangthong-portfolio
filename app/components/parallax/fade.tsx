@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, type ReactNode } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const fade = {
   initial: { opacity: 0, y: 20 },
