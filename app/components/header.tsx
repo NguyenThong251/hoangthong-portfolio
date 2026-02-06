@@ -43,17 +43,17 @@ export function Header() {
       animate="enter"
     >
       {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 flex items-center justify-center">
         <Image
-          src="/images/profile-header.jpg"
+          src="/images/person-header.jpg"
           alt="Nguyen Hoang Thong"
           fill
-          className="object-cover object-center opacity-60"
+          className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/30 via-foreground/60 to-foreground" />
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-foreground/30 via-foreground/60 to-foreground" /> */}
       </div>
-
+     
       {/* Animated background shapes */}
       <motion.div
         className="absolute left-1/4 top-1/4 h-64 w-64 rounded-full bg-primary/10 blur-3xl"

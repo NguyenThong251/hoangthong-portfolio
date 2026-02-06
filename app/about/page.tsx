@@ -106,7 +106,7 @@ export default function AboutPage() {
                 >
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-foreground/50" />
                   <Image
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800"
+                    src="/images/person2.jpg"
                     alt="Profile"
                     fill
                     className="object-cover"
