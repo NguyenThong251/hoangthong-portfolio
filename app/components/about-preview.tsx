@@ -61,7 +61,7 @@ export function AboutPreview() {
               viewport={{ once: true }}
               transition={{ delay: 0.5, type: 'spring' }}
             >
-              2+ Years Exp
+              5+ Years Exp
             </motion.div>
           </motion.div>
 

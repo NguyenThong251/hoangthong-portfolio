@@ -44,14 +44,17 @@ export function Header() {
     >
       {/* Background Image */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <Image
-          src="/images/person-header.jpg"
-          alt="Nguyen Hoang Thong"
-          fill
-          className="object-cover object-center"
-          priority
-        />
-        {/* <div className="absolute inset-0 bg-gradient-to-b from-foreground/30 via-foreground/60 to-foreground" /> */}
+        <div className="relative h-full w-full max-w-[1920px] max-h-screen">
+          <Image
+            src="/images/person-ai.png"
+            alt="Nguyen Hoang Thong"
+            fill
+            className="object-cover object-center md:object-cover md:object-center"
+            priority
+            sizes="100vw"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/30 via-foreground/10 to-foreground" />
       </div>
      
       {/* Animated background shapes */}

@@ -107,7 +107,7 @@ export function Navbar() {
                   <li key={href} className="group">
                     <Link href={href}>
                       <MagneticButton
-                        variant="ghost"
+                        variant="default"
                         size="sm"
                         className="relative px-4 py-2"
                       >
