@@ -13,7 +13,7 @@ import { Timeline } from '../components/timeline';
 import { AnimatedCounter } from '../components/animated-counter';
 import { MarqueeText } from '../components/marquee-text';
 import { personalInfo } from '../data';
-import { Download, ExternalLink } from 'lucide-react';
+import { Download, ExternalLink, Eye } from 'lucide-react';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -25,8 +25,8 @@ const fadeInUp = {
 };
 
 const stats = [
-  { value: 10, suffix: '+', label: 'Projects' },
-  { value: 2, suffix: '+', label: 'Years Exp' },
+  { value: 50, suffix: '+', label: 'Projects' },
+  { value: 5, suffix: '+', label: 'Years Exp' },
   { value: 500, suffix: '+', label: 'Students Taught' },
   { value: 100, suffix: '%', label: 'Passion' },
 ];
@@ -82,12 +82,30 @@ export default function AboutPage() {
                     initial="initial"
                     animate="enter"
                   >
-                    <Link href="/NguyenHoangThong_CV_EN_NewDown.pdf" target="_blank">
+
+{/* <motion.a
+                    href="/images/2026_AI%20Course_NguyenHoangThong.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 rounded-full border border-background/20 bg-background/10 px-4 py-2 text-xs backdrop-blur-sm transition-all hover:bg-background/20"
+                    initial={{ opacity: 0, x: 10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 10 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Download size={14} />
+                    <span>View CV</span>
+                  </motion.a> */}
+
+                    <a href="/images/2026_AI%20Course_NguyenHoangThong.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer">
                       <MagneticButton variant="default" size="lg">
-                        <Download className="mr-2 h-4 w-4" />
-                        Download CV
+                        <Eye className="mr-2 h-4 w-4" />
+                        View Portfolio
                       </MagneticButton>
-                    </Link>
+                    </a>
                     <Link href={personalInfo.github} target="_blank">
                       <MagneticButton variant="ghost" size="lg" className="border-secondary-foreground/50 text-background">
                         <ExternalLink className="mr-2 h-4 w-4" />

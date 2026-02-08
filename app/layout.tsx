@@ -25,6 +25,11 @@ export const metadata: Metadata = {
   keywords: ['Fullstack Developer', 'React', 'Next.js', 'Node.js', 'Portfolio'],
   authors: [{ name: 'Nguyen Hoang Thong' }],
   creator: 'Nguyen Hoang Thong',
+  icons: {
+    icon: '/images/logo-mini.svg',
+    shortcut: '/images/logo-mini.svg',
+    apple: '/images/logo-mini.svg',
+  },
 };
 
 export default function RootLayout({

@@ -18,8 +18,8 @@ import { Transition } from './components/transition';
 import { Offcanvas, OffcanvasProvider } from './components/offcanvas';
 
 const stats = [
-    { value: 10, suffix: '+', label: 'Projects Completed' },
-    { value: 2, suffix: '+', label: 'Years Experience' },
+    { value: 50, suffix: '+', label: 'Projects Completed' },
+    { value: 5, suffix: '+', label: 'Years Experience' },
     { value: 500, suffix: '+', label: 'Students Taught' },
     { value: 100, suffix: '%', label: 'Satisfaction' },
 ];

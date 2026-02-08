@@ -20,7 +20,7 @@ const services = [
     title: 'Web Development',
     description:
       'Building fast, modern websites with Next.js, React, and cutting-edge technologies.',
-    tags: ['Next.js', 'React', 'TypeScript'],
+    tags: ['Next.js', 'React', 'TypeScript', 'Nuxt', 'Vue', 'Ruby', 'Python', 'Laravel', 'PHP', 'JavaScript'],
     color: '#3B82F6',
   },
   {
@@ -36,7 +36,7 @@ const services = [
     title: 'Backend Systems',
     description:
       'Scalable APIs and microservices with NestJS, Node.js, and cloud infrastructure.',
-    tags: ['NestJS', 'Node.js', 'PostgreSQL'],
+    tags: ['NestJS', 'Node.js', 'PostgreSQL', 'GraphQL', 'REST APIs'],
     color: '#10B981',
   },
   {
@@ -44,7 +44,7 @@ const services = [
     title: 'UI/UX Design',
     description:
       'Beautiful, intuitive interfaces that delight users and drive engagement.',
-    tags: ['Figma', 'Design Systems', 'Prototyping'],
+    tags: ['Figma', 'Design Systems', 'Prototyping', 'Photoshop', 'Illustrator'],
     color: '#F59E0B',
   },
   {
@@ -60,7 +60,7 @@ const services = [
     title: 'DevOps & Security',
     description:
       'Secure deployment pipelines, CI/CD, and cloud infrastructure management.',
-    tags: ['Docker', 'AWS', 'CI/CD'],
+    tags: ['Docker', 'AWS', 'CI/CD', 'Kubernetes','Bitbucket'],
     color: '#6366F1',
   },
 ];

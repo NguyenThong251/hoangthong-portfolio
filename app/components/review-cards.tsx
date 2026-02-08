@@ -93,7 +93,7 @@ export function ReviewCards() {
         >
           <div className="flex items-center justify-center rounded-2xl bg-primary p-12">
             <div className="text-center text-background">
-              <div className="font-heading text-8xl font-bold">2+</div>
+              <div className="font-heading text-8xl font-bold">5+</div>
               <p className="mt-2 text-lg">Years of Experience</p>
             </div>
           </div>

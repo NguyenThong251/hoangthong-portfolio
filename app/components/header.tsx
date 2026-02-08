@@ -43,18 +43,17 @@ export function Header() {
       animate="enter"
     >
       {/* Background Image */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="relative h-full w-full max-w-[1920px] max-h-screen">
-          <Image
-            src="/images/person-ai.png"
-            alt="Nguyen Hoang Thong"
-            fill
-            className="object-cover object-center md:object-cover md:object-center"
-            priority
-            sizes="100vw"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-foreground/30 via-foreground/10 to-foreground" />
+      <div className="absolute inset-0">
+        <Image
+          src="/images/thong.jpg"
+          alt="Nguyen Hoang Thong"
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+          quality={90}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-foreground/5 via-foreground/5 to-foreground" />
       </div>
      
       {/* Animated background shapes */}
