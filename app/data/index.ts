@@ -18,7 +18,7 @@ export const preloaderWords = [
 export const socialMedias = [
   { href: 'https://github.com/NguyenThong251', title: 'GitHub' },
   { href: 'https://www.linkedin.com/in/hoangthong', title: 'LinkedIn' },
-  { href: 'https://www.hoangthong.asia/', title: 'Website' },
+  { href: 'https://hoangthong.io.vn/', title: 'Website' },
 ];
 
 export const personalInfo = {
@@ -27,7 +27,7 @@ export const personalInfo = {
   location: 'Ho Chi Minh City, Vietnam',
   email: 'ht01252004@gmail.com',
   phone: '(+84) 868 412 519',
-  website: 'https://www.hoangthong.asia/',
+  website: 'https://hoangthong.io.vn/',
   github: 'https://github.com/NguyenThong251',
 };
 
