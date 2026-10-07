@@ -4,10 +4,11 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { preloaderWords } from '../data';
 
+// Animate transform (y) instead of `top` so the exit slide doesn't trigger layout shifts (CLS).
 const slideUp = {
-  initial: { top: 0 },
+  initial: { y: 0 },
   exit: {
-    top: '-100vh',
+    y: '-100vh',
     transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
   },
 };
