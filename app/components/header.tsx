@@ -6,11 +6,12 @@ import Image from 'next/image';
 import { ParallaxSlider } from './parallax/slider';
 import { personalInfo } from '../data';
 
+// No opacity fade here: the header sits behind the preloader, and keeping it visible
+// lets the hero image paint early so it counts as LCP instead of the delayed text.
 const slideUp = {
-  initial: { y: 100, opacity: 0 },
+  initial: { y: 100 },
   enter: {
     y: 0,
-    opacity: 1,
     transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 2.2 },
   },
 };
