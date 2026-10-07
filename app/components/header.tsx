@@ -12,7 +12,7 @@ const slideUp = {
   initial: { y: 100 },
   enter: {
     y: 0,
-    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 2.2 },
+    transition: { duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 1.4 },
   },
 };
 
@@ -21,7 +21,7 @@ const staggerChildren = {
   enter: {
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 2.4,
+      delayChildren: 1.6,
     },
   },
 };

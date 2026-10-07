@@ -96,7 +96,7 @@ export default function WorkPage() {
                 className="mb-4 text-sm uppercase tracking-widest text-secondary-foreground"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 2.2 }}
+                transition={{ delay: 1.4 }}
               >
                 My Work
               </motion.div>
@@ -105,7 +105,7 @@ export default function WorkPage() {
                 className="mb-6 font-heading text-5xl font-bold md:text-7xl lg:text-8xl"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1], delay: 2.2 }}
+                transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1], delay: 1.4 }}
               >
                 Selected<br />
                 <span className="text-primary">Projects</span>
@@ -115,7 +115,7 @@ export default function WorkPage() {
                 className="max-w-xl text-lg text-secondary-foreground"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 2.4 }}
+                transition={{ duration: 0.6, ease: [0.33, 1, 0.68, 1], delay: 1.6 }}
               >
                 A collection of projects I&apos;ve worked on, ranging from enterprise
                 applications to personal experiments. Each project showcases different

@@ -70,7 +70,7 @@ export default function ContactPage() {
                 className="mb-4 text-sm uppercase tracking-widest text-secondary-foreground"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 2.2 }}
+                transition={{ delay: 1.4 }}
               >
                 Get in Touch
               </motion.div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 transition={{
                   duration: 0.8,
                   ease: [0.33, 1, 0.68, 1],
-                  delay: 2.2,
+                  delay: 1.4,
                 }}
               >
                 Let&apos;s Start a<br />
@@ -96,7 +96,7 @@ export default function ContactPage() {
                 transition={{
                   duration: 0.6,
                   ease: [0.33, 1, 0.68, 1],
-                  delay: 2.4,
+                  delay: 1.6,
                 }}
               >
                 Have a project in mind or just want to say hi? I&apos;m always
