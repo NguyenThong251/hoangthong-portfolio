@@ -41,7 +41,7 @@ export function Preloader() {
 
     const timeout = setTimeout(
       () => setIndex(index + 1),
-      index === 0 ? 300 : 150
+      index === 0 ? 500 : 250
     );
 
     return () => clearTimeout(timeout);

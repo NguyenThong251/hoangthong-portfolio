@@ -17,7 +17,7 @@ export function Transition({ children }: TransitionProps) {
     const timer = setTimeout(() => {
       setLoading(false);
       window.scrollTo(0, 0);
-    }, 1200);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);

@@ -48,7 +48,7 @@ export default function AboutPage() {
                     className="mb-4 text-sm uppercase tracking-widest text-secondary-foreground"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 1.4 }}
+                    transition={{ delay: 2.2 }}
                   >
                     About Me
                   </motion.div>
@@ -57,7 +57,7 @@ export default function AboutPage() {
                     className="mb-8 font-heading text-5xl font-bold md:text-7xl"
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1], delay: 1.4 }}
+                    transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1], delay: 2.2 }}
                   >
                     Hello,<br />
                     I&apos;m <span className="text-primary">Thong</span>
@@ -120,7 +120,7 @@ export default function AboutPage() {
                   className="relative aspect-[4/5] overflow-hidden rounded-2xl"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 1.6, duration: 0.8 }}
+                  transition={{ delay: 2.4, duration: 0.8 }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-foreground/50" />
                   <Image

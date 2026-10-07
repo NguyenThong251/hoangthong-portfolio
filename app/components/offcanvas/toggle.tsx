@@ -14,7 +14,7 @@ export function OffcanvasToggle() {
       whileTap={{ scale: 0.95 }}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
-      transition={{ delay: 1.7 }}
+      transition={{ delay: 2.5 }}
     >
       <div className="relative flex h-5 w-6 flex-col items-center justify-center">
         <motion.span
