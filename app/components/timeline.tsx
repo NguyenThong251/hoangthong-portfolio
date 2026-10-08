@@ -40,7 +40,7 @@ const timelineItems = [
   {
     year: '2022',
     title: 'Started University',
-    company: 'University of Transport HCMC',
+    company: 'University of Information Technology (UIT) – VNU-HCM',
     description: 'Majoring in Information Technology.',
     type: 'education',
   },
