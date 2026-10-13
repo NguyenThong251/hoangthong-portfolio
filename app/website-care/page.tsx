@@ -23,7 +23,7 @@ import {
 } from 'lucide-react';
 
 const ZALO_URL = 'https://zalo.me/0383326547';
-const ZALO_LABEL = 'Nhắn Zalo 0383 326 547';
+const ZALO_LABEL = 'Message on Zalo: +84 383 326 547';
 const EASE = [0.33, 1, 0.68, 1] as const;
 // Matches the 2s preloader in <Transition>, same as the other pages.
 const HERO_DELAY = 2.1;
@@ -31,30 +31,30 @@ const HERO_DELAY = 2.1;
 const problems = [
   {
     icon: ShieldAlert,
-    title: 'Chứng chỉ SSL hết hạn',
+    title: 'Expired SSL certificate',
     description:
-      'Trình duyệt báo “không an toàn”, khách thấy là thoát ra ngay.',
+      'The browser shows a “Not secure” warning, and visitors leave right away.',
     color: '#EF4444',
   },
   {
     icon: PhoneOff,
-    title: 'Nút gọi, Zalo, email gắn sai',
+    title: 'Broken call, Zalo and email buttons',
     description:
-      'Sai số, sai địa chỉ: khách bấm nhưng không liên lạc được.',
+      'Wrong number or wrong address: customers tap, but can’t reach you.',
     color: '#F59E0B',
   },
   {
     icon: ServerCrash,
-    title: 'Web sập mà chủ không biết',
+    title: 'Site down and the owner doesn’t know',
     description:
-      'Lỗi 500/503 hoặc trang mặc định của hosting hiện ra thay cho website.',
+      'A 500/503 error or the host’s default page shows up instead of your website.',
     color: '#8B5CF6',
   },
   {
     icon: CalendarClock,
-    title: 'Tên miền sắp hết hạn, web nặng dần',
+    title: 'Expiring domain, slower pages',
     description:
-      'Quên gia hạn tên miền; ảnh mới đăng chưa nén làm trang chậm dần theo thời gian.',
+      'The domain is about to expire, and new uncompressed images make pages heavier over time.',
     color: '#3B82F6',
   },
 ];
@@ -70,168 +70,167 @@ type Plan = {
 
 const plans: Plan[] = [
   {
-    name: 'Cơ bản',
-    price: '300.000đ',
-    yearly: '3.000.000đ / 12 tháng (tặng 2 tháng)',
-    summary: 'Trông web mỗi ngày cho trang giới thiệu nhỏ.',
+    name: 'Basic',
+    price: '300,000 VND',
+    yearly: '3,000,000 VND / year (2 months free)',
+    summary: 'Daily checks for a small business website.',
     features: [
-      'Theo dõi web còn hoạt động mỗi ngày',
-      'Theo dõi + gia hạn SSL',
-      'Nhắc hạn tên miền, hosting',
-      'Kiểm tra nút gọi, Zalo, email, form mỗi tháng',
-      'Sao lưu mỗi tháng',
-      'Báo cáo 1 trang / tháng',
-      'Phản hồi trong 48 giờ',
+      'Daily uptime monitoring',
+      'SSL monitoring + renewal',
+      'Domain and hosting expiry reminders',
+      'Monthly check of call, Zalo, email buttons and forms',
+      'Monthly backup',
+      '1-page monthly report',
+      'Response within 48 hours',
     ],
   },
   {
-    name: 'Tiêu chuẩn',
-    price: '600.000đ',
-    yearly: '6.000.000đ / 12 tháng (tặng 2 tháng)',
+    name: 'Standard',
+    price: '600,000 VND',
+    yearly: '6,000,000 VND / year (2 months free)',
     highlight: true,
-    summary: 'Đủ cho đa số website doanh nghiệp, có cập nhật và sửa nội dung.',
+    summary: 'Enough for most business websites, with updates and content edits.',
     features: [
-      'Theo dõi mỗi giờ, báo sập trong 1 giờ',
-      'Kiểm tra nút gọi, Zalo, email, form mỗi tuần',
-      'Sao lưu mỗi tuần',
-      'Cập nhật WordPress, plugin mỗi tháng (có backup trước)',
-      'Nén ảnh mới đăng, quét mã độc mỗi tháng',
-      'Sửa nội dung nhỏ 1 giờ / tháng',
-      'Báo cáo chi tiết, phản hồi trong 24 giờ',
+      'Hourly monitoring, downtime alert within 1 hour',
+      'Weekly check of call, Zalo, email buttons and forms',
+      'Weekly backup',
+      'Monthly WordPress and plugin updates (backup first)',
+      'New image compression, monthly malware scan',
+      'Small content edits: 1 hour / month',
+      'Detailed report, response within 24 hours',
     ],
   },
   {
-    name: 'Nâng cao',
-    price: '1.200.000đ',
-    yearly: '12.000.000đ / 12 tháng (tặng 2 tháng)',
-    summary: 'Cho web bán hàng, web cần chạy liên tục.',
+    name: 'Pro',
+    price: '1,200,000 VND',
+    yearly: '12,000,000 VND / year (2 months free)',
+    summary: 'For online stores and sites that must stay up.',
     features: [
-      'Theo dõi mỗi 15 phút, báo sập + xử lý ngay',
-      'Sao lưu mỗi ngày',
-      'Cập nhật WordPress, plugin mỗi tuần',
-      'Đo PageSpeed mỗi tháng + tối ưu nhẹ',
-      'Quét mã độc, link lạ mỗi tuần',
-      'Sửa nội dung nhỏ 3 giờ / tháng',
-      'Báo cáo + gọi trao đổi 15 phút, phản hồi 4 giờ',
+      'Monitoring every 15 minutes, downtime alert + immediate fix',
+      'Daily backup',
+      'Weekly WordPress and plugin updates',
+      'Monthly PageSpeed test + light optimization',
+      'Weekly scan for malware and injected links',
+      'Small content edits: 3 hours / month',
+      'Report + 15-minute call, 4-hour response',
     ],
   },
 ];
 
-// true = có, false = không, string = mô tả
+// true = included, false = not included, string = description
 type Cell = boolean | string;
 const comparison: { label: string; values: [Cell, Cell, Cell] }[] = [
-  { label: 'Giá / tháng', values: ['300.000đ', '600.000đ', '1.200.000đ'] },
   {
-    label: 'Trả trước 12 tháng',
+    label: 'Price / month',
+    values: ['300,000 VND', '600,000 VND', '1,200,000 VND'],
+  },
+  {
+    label: '12-month prepay',
     values: [
-      '3.000.000đ (tặng 2 tháng)',
-      '6.000.000đ (tặng 2 tháng)',
-      '12.000.000đ (tặng 2 tháng)',
+      '3,000,000 VND (2 months free)',
+      '6,000,000 VND (2 months free)',
+      '12,000,000 VND (2 months free)',
     ],
   },
   {
-    label: 'Theo dõi web còn hoạt động',
-    values: ['Mỗi ngày', 'Mỗi giờ', 'Mỗi 15 phút'],
+    label: 'Uptime monitoring',
+    values: ['Daily', 'Hourly', 'Every 15 minutes'],
   },
   {
-    label: 'Báo khi web sập',
-    values: ['Trong ngày', 'Trong 1 giờ', 'Trong 15 phút + xử lý ngay'],
+    label: 'Downtime alert',
+    values: ['Same day', 'Within 1 hour', 'Within 15 minutes + immediate fix'],
   },
   {
-    label: 'Chứng chỉ bảo mật (SSL)',
-    values: ['Theo dõi + gia hạn', 'Theo dõi + gia hạn', 'Theo dõi + gia hạn'],
+    label: 'SSL certificate',
+    values: ['Monitor + renew', 'Monitor + renew', 'Monitor + renew'],
   },
-  { label: 'Nhắc hạn tên miền, hosting', values: [true, true, true] },
+  { label: 'Domain and hosting expiry reminders', values: [true, true, true] },
   {
-    label: 'Kiểm tra nút gọi, Zalo, email, form',
-    values: ['Mỗi tháng', 'Mỗi tuần', 'Mỗi tuần'],
+    label: 'Call, Zalo, email button and form checks',
+    values: ['Monthly', 'Weekly', 'Weekly'],
   },
-  { label: 'Sao lưu (backup)', values: ['Mỗi tháng', 'Mỗi tuần', 'Mỗi ngày'] },
+  { label: 'Backups', values: ['Monthly', 'Weekly', 'Daily'] },
   {
-    label: 'Cập nhật WordPress, plugin, giao diện',
-    values: [false, 'Mỗi tháng (có backup trước)', 'Mỗi tuần'],
-  },
-  {
-    label: 'Đo tốc độ Google PageSpeed',
-    values: ['Mỗi quý', 'Mỗi tháng', 'Mỗi tháng + tối ưu nhẹ'],
-  },
-  { label: 'Nén ảnh mới đăng', values: [false, true, true] },
-  {
-    label: 'Sửa nội dung nhỏ (chữ, ảnh, giá, số điện thoại)',
-    values: [false, '1 giờ / tháng', '3 giờ / tháng'],
+    label: 'WordPress, plugin and theme updates',
+    values: [false, 'Monthly (backup first)', 'Weekly'],
   },
   {
-    label: 'Quét mã độc, link lạ bị chèn',
-    values: [false, 'Mỗi tháng', 'Mỗi tuần'],
+    label: 'Google PageSpeed test',
+    values: ['Quarterly', 'Monthly', 'Monthly + light optimization'],
+  },
+  { label: 'New image compression', values: [false, true, true] },
+  {
+    label: 'Small content edits (text, images, prices, phone numbers)',
+    values: [false, '1 hour / month', '3 hours / month'],
   },
   {
-    label: 'Báo cáo',
-    values: [
-      '1 trang / tháng',
-      'Chi tiết / tháng',
-      'Chi tiết + gọi trao đổi 15 phút',
-    ],
+    label: 'Malware and injected link scan',
+    values: [false, 'Monthly', 'Weekly'],
   },
   {
-    label: 'Thời gian phản hồi',
-    values: ['48 giờ', '24 giờ', '4 giờ (giờ hành chính)'],
+    label: 'Report',
+    values: ['1 page / month', 'Detailed / month', 'Detailed + 15-minute call'],
+  },
+  {
+    label: 'Response time',
+    values: ['48 hours', '24 hours', '4 hours (business hours)'],
   },
 ];
 
 const exclusions = [
   {
-    title: 'Làm lại giao diện, thêm trang/tính năng mới',
+    title: 'Redesigns, new pages or new features',
     detail:
-      'Theo bảng giá làm web: landing 2.500.000đ, web 3–5 trang 5.000.000đ.',
+      'Per the web build price list: landing page 2,500,000 VND, 3–5 page site 5,000,000 VND.',
   },
   {
-    title: 'Tối ưu tốc độ chuyên sâu',
-    detail: 'Gói riêng 700.000đ / 1.900.000đ.',
+    title: 'In-depth speed optimization',
+    detail: 'Separate packages: 700,000 VND / 1,900,000 VND.',
   },
   {
-    title: 'Phí tên miền, hosting, plugin trả phí',
+    title: 'Domain, hosting and paid plugin fees',
     detail:
-      'Anh/chị tự thanh toán cho nhà cung cấp; em nhắc hạn và hướng dẫn.',
+      'You pay the providers directly; I send renewal reminders and guidance.',
   },
   {
-    title: 'Khôi phục web bị hack nặng trước khi đăng ký gói',
-    detail: 'Báo giá sau khi xem.',
+    title: 'Recovering a badly hacked site from before you signed up',
+    detail: 'Quoted after I take a look.',
   },
 ];
 
 const faqs = [
   {
-    q: 'Có bị ràng buộc hợp đồng dài hạn không?',
-    a: 'Không. Anh/chị dừng bất cứ lúc nào, chỉ cần báo trước 7 ngày. Em bàn giao lại toàn bộ bản sao lưu và quyền truy cập.',
+    q: 'Is there a long-term contract?',
+    a: 'No. Cancel anytime with 7 days’ notice. I hand back all backups and access.',
   },
   {
-    q: 'Em cần quyền truy cập gì? Có an toàn không?',
-    a: 'Anh/chị tự tạo một tài khoản quản trị riêng cho em, không cần gửi mật khẩu tài khoản chính qua tin nhắn. Khi kết thúc, anh/chị chỉ cần xoá tài khoản đó.',
+    q: 'What access do you need? Is it safe?',
+    a: 'You create a separate admin account for me, so you never send your main account password over chat. When we finish, you simply delete that account.',
   },
   {
-    q: 'Thanh toán thế nào? Trả 12 tháng có lợi gì?',
-    a: 'Thanh toán đầu mỗi tháng bằng chuyển khoản. Trả trước 12 tháng được tặng 2 tháng. Giờ sửa nội dung không dùng hết không cộng dồn sang tháng sau.',
+    q: 'How does payment work? Why prepay 12 months?',
+    a: 'Pay by bank transfer at the start of each month. Prepay 12 months and get 2 months free. Unused content edit hours don’t roll over to the next month.',
   },
   {
-    q: 'Phí hosting, tên miền đã nằm trong gói chưa?',
-    a: 'Chưa. Phí tên miền, hosting và plugin trả phí anh/chị thanh toán trực tiếp cho nhà cung cấp. Em theo dõi, nhắc hạn và hướng dẫn gia hạn.',
+    q: 'Are hosting and domain fees included?',
+    a: 'No. You pay domain, hosting and paid plugin fees directly to the providers. I track the dates, remind you before they expire and guide you through renewal.',
   },
   {
-    q: 'Web không dùng WordPress thì sao?',
-    a: 'Phần theo dõi web còn hoạt động, SSL, tên miền, nút gọi/Zalo/email, tốc độ và báo cáo áp dụng cho mọi website. Riêng mục cập nhật WordPress, plugin dành cho web WordPress; nền tảng khác anh/chị nhắn em để trao đổi cụ thể.',
+    q: 'What if my site isn’t on WordPress?',
+    a: 'Uptime monitoring, SSL, domain, call/Zalo/email buttons, speed and reports work for any website. WordPress and plugin updates apply to WordPress sites only; for other platforms, message me and we’ll talk it through.',
   },
 ];
 
 function CellValue({ value }: { value: Cell }) {
   if (value === true)
     return (
-      <Check className="mx-auto h-5 w-5 text-primary" aria-label="Có" />
+      <Check className="mx-auto h-5 w-5 text-primary" aria-label="Included" />
     );
   if (value === false)
     return (
       <Minus
         className="mx-auto h-5 w-5 text-muted-foreground/60"
-        aria-label="Không"
+        aria-label="Not included"
       />
     );
   return <span>{value}</span>;
@@ -266,7 +265,7 @@ function ContactButtons({ dark = false }: { dark?: boolean }) {
   );
 }
 
-export default function ChamSocWebsitePage() {
+export default function WebsiteCarePage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -294,7 +293,7 @@ export default function ChamSocWebsitePage() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: HERO_DELAY }}
               >
-                Dịch vụ hằng tháng
+                Monthly service
               </motion.div>
 
               <motion.h1
@@ -303,9 +302,9 @@ export default function ChamSocWebsitePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: EASE, delay: HERO_DELAY }}
               >
-                Gói chăm sóc
+                Website
                 <br />
-                <span className="text-primary">website</span>
+                <span className="text-primary">care plans</span>
               </motion.h1>
 
               <motion.p
@@ -314,7 +313,8 @@ export default function ChamSocWebsitePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: EASE, delay: HERO_DELAY + 0.1 }}
               >
-                Web luôn chạy, nút gọi luôn đúng, khách luôn liên lạc được.
+                Your website, always on. Call buttons that work. Customers who
+                can reach you.
               </motion.p>
 
               <motion.div
@@ -324,10 +324,10 @@ export default function ChamSocWebsitePage() {
                 transition={{ duration: 0.6, ease: EASE, delay: HERO_DELAY + 0.2 }}
               >
                 <a
-                  href="#bang-gia"
+                  href="#pricing"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-background px-6 py-4 font-medium text-foreground transition-transform hover:scale-[1.03]"
                 >
-                  Xem bảng giá
+                  See pricing
                   <ArrowUpRight className="h-5 w-5" />
                 </a>
                 <a
@@ -344,7 +344,7 @@ export default function ChamSocWebsitePage() {
           </section>
 
           <MarqueeText
-            text="Chăm sóc website"
+            text="Website care"
             bgColor="bg-primary"
             textColor="text-background"
           />
@@ -359,15 +359,18 @@ export default function ChamSocWebsitePage() {
                 viewport={{ once: true }}
               >
                 <p className="mb-4 text-sm uppercase tracking-widest text-muted-foreground">
-                  Vì sao cần
+                  Why it matters
                 </p>
                 <h2 className="mb-6 font-heading text-3xl font-bold md:text-5xl">
-                  Vấn đề <span className="text-primary">thường gặp</span>
+                  Common <span className="text-primary">problems</span>
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Khi kiểm tra 180 website doanh nghiệp nhỏ (10/2026), lỗi gặp
-                  nhiều nhất không phải tốc độ mà là{' '}
-                  <strong className="text-foreground">web không ai trông</strong>.
+                  After checking 180 small business websites (October 2026),
+                  the most common problem wasn’t speed. It was{' '}
+                  <strong className="text-foreground">
+                    websites nobody was looking after
+                  </strong>
+                  .
                 </p>
               </motion.div>
 
@@ -399,14 +402,14 @@ export default function ChamSocWebsitePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                Chủ doanh nghiệp không có thời gian kiểm tra những thứ này. Gói
-                chăm sóc làm việc đó mỗi ngày và báo lại mỗi tháng.
+                Business owners don’t have time to check all this. A care plan
+                does it every day and reports back every month.
               </motion.p>
             </div>
           </section>
 
           {/* Pricing */}
-          <section id="bang-gia" className="scroll-mt-24 bg-muted py-20 md:py-28">
+          <section id="pricing" className="scroll-mt-24 bg-muted py-20 md:py-28">
             <div className="container mx-auto px-5 md:px-8">
               <motion.div
                 className="mb-12 max-w-3xl"
@@ -415,14 +418,14 @@ export default function ChamSocWebsitePage() {
                 viewport={{ once: true }}
               >
                 <p className="mb-4 text-sm uppercase tracking-widest text-muted-foreground">
-                  Bảng giá
+                  Pricing
                 </p>
                 <h2 className="mb-4 font-heading text-3xl font-bold md:text-5xl">
-                  3 gói, <span className="text-primary">thu theo tháng</span>
+                  3 plans, <span className="text-primary">billed monthly</span>
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Trả trước 12 tháng được tặng 2 tháng. Không ràng buộc, dừng
-                  bất cứ lúc nào.
+                  Prepay 12 months and get 2 months free. No lock-in, cancel
+                  anytime.
                 </p>
               </motion.div>
 
@@ -442,7 +445,7 @@ export default function ChamSocWebsitePage() {
                   >
                     {plan.highlight && (
                       <span className="absolute -top-3 left-6 rounded-full bg-primary px-3 py-1 text-xs font-semibold uppercase tracking-wider text-background md:left-8">
-                        Khuyên dùng
+                        Recommended
                       </span>
                     )}
                     <h3 className="mb-2 font-heading text-2xl font-bold">
@@ -464,7 +467,7 @@ export default function ChamSocWebsitePage() {
                           plan.highlight ? 'text-secondary-foreground' : 'text-muted-foreground'
                         }
                       >
-                        / tháng
+                        / month
                       </span>
                     </div>
                     <p
@@ -496,7 +499,7 @@ export default function ChamSocWebsitePage() {
                           : 'border border-foreground text-foreground'
                       }`}
                     >
-                      Chọn gói {plan.name}
+                      Choose {plan.name}
                       <ArrowUpRight className="h-5 w-5" />
                     </a>
                   </motion.div>
@@ -515,13 +518,13 @@ export default function ChamSocWebsitePage() {
                 viewport={{ once: true }}
               >
                 <p className="mb-4 text-sm uppercase tracking-widest text-muted-foreground">
-                  So sánh chi tiết
+                  Full comparison
                 </p>
                 <h2 className="font-heading text-3xl font-bold md:text-5xl">
-                  Mỗi gói <span className="text-primary">làm những gì</span>
+                  What each plan <span className="text-primary">covers</span>
                 </h2>
                 <p className="mt-4 text-sm text-muted-foreground md:hidden">
-                  Vuốt ngang bảng để xem đủ 3 gói.
+                  Swipe to see all 3 plans.
                 </p>
               </motion.div>
 
@@ -533,7 +536,7 @@ export default function ChamSocWebsitePage() {
                         scope="col"
                         className="sticky left-0 z-10 w-36 bg-muted p-3 font-semibold md:w-[34%] md:p-4"
                       >
-                        Quyền lợi
+                        Feature
                       </th>
                       {plans.map((plan) => (
                         <th
@@ -546,7 +549,7 @@ export default function ChamSocWebsitePage() {
                           {plan.name}
                           {plan.highlight && (
                             <span className="block text-xs font-normal text-secondary-foreground">
-                              khuyên dùng
+                              recommended
                             </span>
                           )}
                         </th>
@@ -593,14 +596,14 @@ export default function ChamSocWebsitePage() {
                   <Gift className="h-6 w-6" />
                 </div>
                 <h2 className="mb-4 font-heading text-2xl font-bold md:text-4xl">
-                  Ưu đãi tháng đầu
+                  First-month offer
                 </h2>
                 <p className="text-lg text-background/90">
-                  Trước khi đăng ký, em kiểm tra web của anh/chị miễn phí. Các
-                  lỗi tìm thấy (nút gọi sai, SSL hết hạn, link email hỏng, ảnh
-                  lỗi…){' '}
-                  <strong className="text-background">em sửa miễn phí</strong>{' '}
-                  khi anh/chị đăng ký gói từ Tiêu chuẩn trở lên.
+                  Before you sign up, I check your website for free. The
+                  issues I find (wrong call button, expired SSL, broken email
+                  link, broken images…){' '}
+                  <strong className="text-background">I fix for free</strong>{' '}
+                  when you sign up for Standard or higher.
                 </p>
               </motion.div>
 
@@ -615,9 +618,9 @@ export default function ChamSocWebsitePage() {
                   <CircleOff className="h-6 w-6 text-muted-foreground" />
                 </div>
                 <h2 className="mb-2 font-heading text-2xl font-bold md:text-4xl">
-                  Không bao gồm
+                  Not included
                 </h2>
-                <p className="mb-6 text-muted-foreground">Báo giá riêng.</p>
+                <p className="mb-6 text-muted-foreground">Quoted separately.</p>
                 <ul className="space-y-4">
                   {exclusions.map((item) => (
                     <li key={item.title} className="border-b border-border pb-4 last:border-0 last:pb-0">
@@ -640,10 +643,10 @@ export default function ChamSocWebsitePage() {
                   viewport={{ once: true }}
                 >
                   <p className="mb-4 text-sm uppercase tracking-widest text-muted-foreground">
-                    Câu hỏi thường gặp
+                    FAQ
                   </p>
                   <h2 className="font-heading text-3xl font-bold md:text-5xl">
-                    Điều khoản <span className="text-primary">ngắn gọn</span>
+                    The short <span className="text-primary">terms</span>
                   </h2>
                 </motion.div>
 
@@ -675,13 +678,14 @@ export default function ChamSocWebsitePage() {
                 viewport={{ once: true }}
               >
                 <h2 className="mb-6 font-heading text-3xl font-bold md:text-6xl">
-                  Để em trông web,
+                  I look after your website,
                   <br />
-                  <span className="text-primary">anh/chị lo bán hàng.</span>
+                  <span className="text-primary">you focus on selling.</span>
                 </h2>
                 <p className="mb-10 text-lg text-secondary-foreground">
-                  Nhắn em địa chỉ website và gói anh/chị quan tâm, em tư vấn gói
-                  phù hợp và gửi hướng dẫn bắt đầu.
+                  Send me your website address and the plan you’re interested
+                  in. I’ll recommend the right fit and send you the steps to get
+                  started.
                 </p>
                 <ContactButtons dark />
               </motion.div>

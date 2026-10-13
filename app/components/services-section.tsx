@@ -63,7 +63,7 @@ const services: Service[] = [
       'Optimizing applications for speed, accessibility, and SEO excellence.',
     tags: ['Core Web Vitals', 'SEO', 'Analytics'],
     color: '#EF4444',
-    link: { href: '/cham-soc-website', label: 'Gói chăm sóc website' },
+    link: { href: '/website-care', label: 'Website care plans' },
   },
   {
     icon: Shield,
@@ -167,7 +167,6 @@ export function ServicesSection() {
               {service.link && (
                 <Link
                   href={service.link.href}
-                  lang="vi"
                   className="relative z-10 mt-6 inline-flex items-center gap-1 text-sm font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
                 >
                   {service.link.label}

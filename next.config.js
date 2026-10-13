@@ -9,6 +9,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/cham-soc-website',
+        destination: '/website-care',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
