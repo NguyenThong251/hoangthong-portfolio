@@ -14,7 +14,16 @@ import {
 import { MagneticButton } from './ui/magnetic-button';
 import Link from 'next/link';
 
-const services = [
+type Service = {
+  icon: typeof Globe;
+  title: string;
+  description: string;
+  tags: string[];
+  color: string;
+  link?: { href: string; label: string };
+};
+
+const services: Service[] = [
   {
     icon: Globe,
     title: 'Web Development',
@@ -54,6 +63,7 @@ const services = [
       'Optimizing applications for speed, accessibility, and SEO excellence.',
     tags: ['Core Web Vitals', 'SEO', 'Analytics'],
     color: '#EF4444',
+    link: { href: '/cham-soc-website', label: 'Gói chăm sóc website' },
   },
   {
     icon: Shield,
@@ -153,6 +163,17 @@ export function ServicesSection() {
                   </span>
                 ))}
               </div>
+
+              {service.link && (
+                <Link
+                  href={service.link.href}
+                  lang="vi"
+                  className="relative z-10 mt-6 inline-flex items-center gap-1 text-sm font-medium text-muted-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
+                >
+                  {service.link.label}
+                  <ArrowUpRight className="h-4 w-4" />
+                </Link>
+              )}
 
               {/* Hover arrow */}
               <motion.div
