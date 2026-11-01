@@ -137,7 +137,7 @@ export function Navbar() {
                   </motion.div>
                   
                   <motion.a
-                    href="public/images/images/2026_AI%20Course_NguyenHoangThong.pdf"
+                    href="/images/2026_AI%20Course_NguyenHoangThong.pdf"
                     download="NguyenHoangThong_CV.pdf"
                     className="flex items-center gap-2 rounded-full border border-background/20 bg-background/10 px-4 py-2 text-xs backdrop-blur-sm transition-all hover:bg-background/20"
                     initial={{ opacity: 0, x: 10 }}
