@@ -6,6 +6,13 @@ import { Briefcase, GraduationCap, Award } from 'lucide-react';
 
 const timelineItems = [
   {
+    year: 'Present',
+    title: 'Studying at University',
+    company: 'University of Information Technology (UIT) – VNU-HCM',
+    description: 'Majoring in Information Technology.',
+    type: 'education',
+  },
+  {
     year: '2025',
     title: 'Full Stack Developer',
     company: 'Quoc Duy',
@@ -39,9 +46,9 @@ const timelineItems = [
   },
   {
     year: '2022',
-    title: 'Started University',
-    company: 'University of Information Technology (UIT) – VNU-HCM',
-    description: 'Majoring in Information Technology.',
+    title: 'Graduated',
+    company: 'FPT Polytechnic',
+    description: 'Completed the Information Technology program.',
     type: 'education',
   },
 ];
