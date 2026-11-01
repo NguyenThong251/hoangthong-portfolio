@@ -17,7 +17,7 @@ export const preloaderWords = [
 
 export const socialMedias = [
   { href: 'https://github.com/NguyenThong251', title: 'GitHub' },
-  { href: 'https://www.linkedin.com/in/hoangthong', title: 'LinkedIn' },
+  { href: 'https://www.linkedin.com/in/th%C3%B4ng-nguy%E1%BB%85n-ho%C3%A0ng-9880bb422/', title: 'LinkedIn' },
   { href: 'https://hoangthong.io.vn/', title: 'Website' },
 ];
 

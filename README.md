@@ -94,5 +94,5 @@ MIT License
 
 **Nguyen Hoang Thong**
 - GitHub: [@NguyenThong251](https://github.com/NguyenThong251)
-- LinkedIn: [Nguyen Hoang Thong](https://linkedin.com/in/nguyenhoangthong251)
+- LinkedIn: [Nguyen Hoang Thong](https://www.linkedin.com/in/th%C3%B4ng-nguy%E1%BB%85n-ho%C3%A0ng-9880bb422/)
 - Email: nguyenhoangthong251@gmail.com
